@@ -1,0 +1,29 @@
+.nav-logo {
+  display: inline-block;
+}
+
+.nav-slogan {
+  margin-left: 60%;
+  display: inline-block;
+}
+
+.nav-top {
+  display: flex;
+}
+
+.nav-button {
+  margin-left: 2%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-bottom li {
+  margin: 10px;
+}
+
+.nav-bottom {
+  display: flex;
+}
