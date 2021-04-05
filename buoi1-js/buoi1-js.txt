@@ -1,4 +1,0 @@
-copy: const name = [...state];
-map: trả về 1 mảng phải đủ độ dài so với mảng ban đầu
-filter và for sẽ trả về mảng có thể thay đổi độ dài so với mảng ban đầu
-reduce: array.reduce(function(result, current),0): giống 2 vòng for lồng nhau
