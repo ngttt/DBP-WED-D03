@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            //GET
+            $('#show-text-btn').click(function () {
+                alert($('#text').text());
+            })
+
+            $('#show-HTML-btn').click(function () {
+                alert($('#text').html())
+            })
+
+            $('#show-value-btn').click( function() {
+                alert($('#name-input').val());
+            })
+
+            $('#show-attribute-btn').click( function() {
+                alert($('#text').attr('style'));
+            })
+
+            //SET
+            $('#set-text-btn').click(function () {
+                $('#text').text('ahihi');
+            })
+
+            $('#set-HTML-btn').click(function () {
+                $('#text').html('<span>da thay doi</span>')
+            })
+
+            $('#set-value-btn').click( function() {
+                $('#name-input').val('da thay doi input value');
+            })
+
+            $('#set-attribute-btn').click( function() {
+                $('#text').attr('style','background-color:green');
+            })
+
+            //ADD
+            $('#add-append-btn').click( function() {
+            $('#text').append('<span>da thay doi<span>');
+            })
+
+            $('#add-prepend-btn').click( function() {
+                $('#text').prepend('<span>da thay doi<span>');
+            })
+
+            $('#add-after-btn').click( function() {
+                $('#text').after('<span>da thay doi<span>');
+            })
+
+            $('#add-before-btn').click( function() {
+                $('#text').before('<span>da thay doi<span>');
+            })
+
+            //LOAD
+            $('#load-btn').click( function () {
+                $('#text').load('http://localhost:1999/users/')
+            })
+
+            $('#get-btn').click( function() {
+                $.get('http://localhost:1999/users/').click( function (data, status) {
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+        <p id="text" style="background-color: aquamarine; padding: 8px;">
+            this is text
+            <span>ei eii ei</span>
+        </p>
+        <label for="username">Username: </label>
+        <br>
+        <input type="text" id="name-input" name="username" value="Input text...">
+        <br>
+
+        <h4 id="get-heading">GET</h4>
+        <button id="show-text-btn">Show Text</button>
+        <button id="show-HTML-btn">Show HTML</button>
+        <button id="show-value-btn">Show Value</button>
+        <button id="show-attribute-btn">Show Atr</button>
+
+        <h4 id="get-heading">SET</h4>
+        <button id="set-text-btn">Set Text</button>
+        <button id="set-HTML-btn">Set HTML</button>
+        <button id="set-value-btn">Set Value</button>
+        <button id="set-attribute-btn">Set Atr</button>
+
+        <h4 id="get-heading">ADD</h4>
+        <button id="add-append-btn">Using Append</button>
+        <button id="add-prepend-btn">Using Prepend</button>
+        <button id="add-after-btn">Using After</button>
+        <button id="add-before-btn">Using Before</button>
+
+        <h4 id="get-heading">AJAX</h4>
+        <button id="load-btn">Load Users</button>
+        <button id="get-btn">Get Users</button>
+        <button id="post-btn">Post Users</button>
+        
+        <form id="form-login">
+            <label>name: </label>
+            <input type="text" id="user-name" name="username" value="Input text...">
+            <label>password: </label>
+            <input type="password" id="user-pass" name="userpass">
+        </form>
+</body>
+</html>
