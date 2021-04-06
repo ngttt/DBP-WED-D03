@@ -42,7 +42,22 @@
                 $('#text').attr('style','background-color:green');
             })
 
-            
+               //ADD
+               $('#add-append-btn').click( function() {
+                $('#text').append('<span>da thay doi<span>');
+            })
+
+            $('#add-prepend-btn').click( function() {
+                $('#text').prepend('<span>da thay doi<span>');
+            })
+
+            $('#add-after-btn').click( function() {
+                $('#text').after('<span>da thay doi<span>');
+            })
+
+            $('#add-before-btn').click( function() {
+                $('#text').before('<span>da thay doi<span>');
+            })
         })
     </script>
 </head>
@@ -67,5 +82,11 @@
         <button id="set-HTML-btn">Set HTML</button>
         <button id="set-value-btn">Set Value</button>
         <button id="set-attribute-btn">Set Atr</button>
+
+        <h4 id="get-heading">ADD</h4>
+        <button id="add-append-btn">Using Append</button>
+        <button id="add-prepend-btn">Using Prepend</button>
+        <button id="add-after-btn">Using After</button>
+        <button id="add-before-btn">Using Before</button>
 </body>
 </html>
