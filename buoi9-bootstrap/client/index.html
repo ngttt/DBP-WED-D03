@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <script>
+        $(document).ready(function() {
+            //LOAD
+            $('#load-btn').click( function () {
+                $('#text').load('http://localhost:1999/users/')
+            })
+
+            $('#get-btn').click( function() {
+                $.get('http://localhost:1999/users/'), function (data, status) {
+                    alert("Data: " + data + "\nStatus: " + status)
+                }
+            })
+
+            $('#post-btn').click( function() {
+                $.post('http://localhost:1999/users/'),{'id':8, "name": "tung"}, function (data, status) {
+                    alert("Data: " + data + "\nStatus: " + status)
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="container">
+            <div class="row">
+              <div class="col-6 col-md-4 col-xl-3" style="border: 2px solid red; background-color: bisque;">
+                One of three columns
+              </div>
+              <div class="col-6 col-md-4 col-xl-3" style="border: 2px solid red;background-color: bisque">
+                One of three columns
+              </div>
+              <div class="col-6 col-md-4 col-xl-3" style="background-color: bisque;border: 2px solid red">
+                One of three columns
+              </div>
+              <div class="col-6 col-md-4 col-xl-3" style="border: 2px solid red;background-color: bisque">
+                One of three columns
+              </div>
+              <div class="col-6 col-md-4 col-xl-3" style="border: 2px solid red; background-color: bisque">
+                One of three columns
+              </div>
+              <div class="col-6 col-md-4 col-xl-3" style="border: 2px solid red; background-color: bisque">
+                One of three columns
+              </div>
+              <div class="col-6 col-md-4 col-xl-3" style="border: 2px solid red; background-color: bisque">
+                One of three columns
+              </div>
+              <div class="col-6 col-md-4 col-xl-3" style="border: 2px solid red; background-color: bisque">
+                One of three columns
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <br>
+
+    <div class="container">
+        <div class="row">
+          <div class="col-xl-6 col-md-12 col-12" style="border: 2px solid green">
+            1 of 3
+          </div>
+          <div class="col-xl-6 col-md-12 col-12" style="border: 2px solid green">
+            <div class="row ">
+                row
+            </div>
+            <div class="row" >
+                <div class="col-xl-3 col-md-3 col-12" style="border: 2px solid green">
+                    col
+                </div>
+
+                <div class="col-xl-9 col-md-9 col-12" style="border: 2px solid green">
+                    col
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+      <br>
+
+      <div class="container d-xl-flex " style="height: 200px; background-color: teal" >
+        <div class="row d-xl-flex flex-column">
+          <div class="col-xl-6 col-md-12 col-12" style="border: 2px solid yellow">
+            1 of 3
+          </div>
+          <div class="col-xl-6 col-md-12 col-12" style="border: 2px solid yellow">
+            <div class="row ">
+                row
+            </div>
+            <div class="row " >
+                <div class="col-xl-3 col-md-3 col-12 " style="border: 2px solid yellow">
+                    col
+                </div>
+
+                <div class="col-xl-9 col-md-9 col-12" style="border: 2px solid yellow">
+                    col
+                </div>
+            </div>
+        </div>
+      </div>
+      
+</body>
+</html>

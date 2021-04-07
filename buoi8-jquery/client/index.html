@@ -66,6 +66,14 @@
 
             $('#get-btn').click( function() {
                 $.get('http://localhost:1999/users/').click( function (data, status) {
+                    alert("Data: " + data + "\nStatus: " + status)
+                })
+            })
+
+            $('#post-btn').click( function() {
+                
+                $.get('http://localhost:1999/users/').click( function (data, status) {
+                    alert("Data: " + data + "\nStatus: " + status)
                 })
             })
         })
