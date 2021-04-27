@@ -74,31 +74,22 @@ module.exports.postUser = (req, res) => {
   });
 };
 
-// module.exports.deleteUser = (req, res) => {
-//   const { id } = req.params;
-//   let index = -1;
+module.exports.deleteUser = (req, res) => {
+  const { id } = req.params;
+  User.findByIdAndDelete(id, function (err) {
+    if (err) {
+      return res.status(500).json({
+        isSucces: false,
+        message: "delete failed",
+      });
+    }
 
-//   for (let i = 0; i < users.length; i++) {
-//     if (users[i].id === id) {
-//       index = i;
-//     }
-//   }
-
-//   if (index === -1) {
-//     return res.status(400).json({
-//       isSucces: false,
-//       message: "Not found",
-//     });
-//   }
-
-//   users.splice(index, 1);
-
-//   res.status(200).json({
-//     isSucces: true,
-//     message: "success",
-//     users,
-//   });
-// };
+    res.status(200).json({
+      isSucces: true,
+      message: "delete success",
+    });
+  });
+};
 
 module.exports.putUser = (req, res) => {
   const { id } = req.params;

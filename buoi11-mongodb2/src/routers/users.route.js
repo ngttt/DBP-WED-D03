@@ -9,7 +9,7 @@ router.get("/:id", usersController.getUserByID);
 
 router.post("/", usersController.postUser);
 
-// router.delete("/:id", usersController.deleteUser);
+router.delete("/:id", usersController.deleteUser);
 
 router.put("/:id", usersController.putUser);
 // app.delete("/users/:id", (req, res) => {
